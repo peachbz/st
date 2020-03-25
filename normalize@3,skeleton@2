@@ -843,27 +843,3 @@ there.
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
-
-
-
-/*
-     FILE ARCHIVED ON 23:29:17 Oct 03, 2018 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 07:38:10 Mar 25, 2020.
-     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
-
-     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
-     SECTION 108(a)(3)).
-*/
-/*
-playback timings (ms):
-  captures_list: 174.582
-  load_resource: 98.513
-  esindex: 0.011
-  CDXLines.iter: 15.393 (3)
-  exclusion.robots.policy: 0.132
-  PetaboxLoader3.datanode: 67.014 (4)
-  LoadShardBlock: 155.557 (3)
-  PetaboxLoader3.resolve: 56.796 (2)
-  RedisCDXSource: 0.482
-  exclusion.robots: 0.143
-*/
