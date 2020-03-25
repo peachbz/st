@@ -2,12 +2,12 @@
 <html lang="en">
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     
-    <meta name="description" content="SpeedTest Tests your Internet Speed Test">
+    <meta name="description" content="SpeedTest Tests your Internet Speed in Bits and Bytes">
     <meta name="keywords" content="speedtest,speed,test,internet,fast.com,speedtest.net,p2p">
     <link rel="shortcut icon" type="image/x-icon" href="https://cdn0.iconfinder.com/data/icons/wireless-network-2/80/Network-09-512.png" />
-    <link rel="stylesheet" href="duh.css">
-    <link rel="stylesheet" href="font-awesome.min.css">
-    <script src="webtorrent.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/g/normalize@3,skeleton@2">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontawesome/4/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/webtorrent/latest/webtorrent.min.js"></script>
     <title>SpeedTest - Noobiez</title>
 </head>
 <body style="text-align: center">
@@ -16,7 +16,7 @@
     <small>SpeedTest By Noobiez</small>
 </header>
 
-<h2 id="starting">Test will Begin in Few Seconds</h2>
+<h2 id="starting">Test will Begin in Few Minutes</h2>
 <div id="counters" style="visibility: hidden; display: none">
     <h3>Speed in bytes: <small id="speedBytes"></small></h3>
     <h3>Speed in bits: <small id="speedBits"></small></h3>
@@ -39,8 +39,14 @@
     var stopTimeout
     var speeds = []
     
-    
-    var updateSpeed = function () {
+    // Sintel, a free, Creative Commons movie
+    var torrentId = 'magnet:?xt=urn:btih:6a9759bffd5c0af65319979fb7832189f4f3c35d&dn=sintel.mp4&tr=wss://tracker.btorrent.xyz&tr=wss://tracker.openwebtorrent.com&ws=https://webtorrent.io/torrents/sintel-1024-surround.mp4&ws=https://webseed.btorrent.xyz/sintel-1024-surround.mp4'
+
+    client.add(torrentId, function (torrent) {
+        counters.removeAttribute('style')
+        starting.parentNode.removeChild(starting)
+        
+        var updateSpeed = function () {
             var speed = torrent.downloadSpeed
             speeds.push(speed)
             if(speeds.length > 50) {
